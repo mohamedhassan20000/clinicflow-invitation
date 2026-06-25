@@ -1,54 +1,80 @@
 /**
- * ClinicFlow CRM — RSVP collector (Google Apps Script Web App)
+ * ClinicFlow CRM — RSVP collector (Google Apps Script Web App) — v2
  * --------------------------------------------------------------
- * Receives an x-www-form-urlencoded POST from the RSVP site and appends
- * one row to the bound Google Sheet. Designed for `fetch(..., {mode:'no-cors'})`
- * from a static GitHub Pages site (the browser cannot read the response, so we
- * keep it simple and just write the row).
+ * Stores ONE row per attendee (keyed by clientId) and keeps the latest
+ * RSVP status. Supports confirm + cancel (status changes, never deletes).
  *
- * SETUP (see README.md for the full walkthrough):
- *   1. Create a Google Sheet. Extensions → Apps Script.
- *   2. Paste this file. Save.
- *   3. Deploy → New deployment → type "Web app".
- *        - Execute as: Me
- *        - Who has access: Anyone
- *   4. Copy the /exec URL into assets/js/config.js → RSVP_ENDPOINT.
+ * Columns: First Seen | Name | Status | Last Updated | Client ID | Source | User Agent
  *
- * Re-deploy a NEW VERSION whenever you change this script.
+ * Works with `fetch(..., {mode:'no-cors'})` from a static GitHub Pages site.
+ *
+ * SETUP (full walkthrough in README.md):
+ *   1. Google Sheet → Extensions → Apps Script. Paste this. Save.
+ *   2. Deploy → New deployment → "Web app"
+ *        Execute as: Me   |   Who has access: Anyone
+ *   3. Copy the /exec URL into assets/js/config.js → RSVP_ENDPOINT.
+ *   4. After ANY edit here: Deploy → Manage deployments → edit → New version.
  */
 
 var SHEET_NAME = 'RSVPs';
+var HEADERS = ['First Seen', 'Name', 'Status', 'Last Updated', 'Client ID', 'Source', 'User Agent'];
+var COL = { firstSeen: 1, name: 2, status: 3, updated: 4, clientId: 5, source: 6, ua: 7 };
 
 function doPost(e) {
+  var lock = LockService.getScriptLock();
   try {
-    var lock = LockService.getScriptLock();
-    lock.waitLock(20000); // avoid race conditions on concurrent submits
-
+    lock.waitLock(20000);
     var sheet = getSheet_();
-    var params = (e && e.parameter) ? e.parameter : {};
+    var p = (e && e.parameter) ? e.parameter : {};
 
-    var name = String(params.name || '').trim().slice(0, 120);
-    if (!name) {
-      return json_({ ok: false, error: 'missing name' });
+    var name = String(p.name || '').trim().slice(0, 120);
+    var clientId = String(p.clientId || '').trim().slice(0, 60);
+    var action = String(p.action || 'confirm').toLowerCase();
+    var status = action === 'cancel' ? 'Cancelled' : 'Attending';
+    if (!name) return json_({ ok: false, error: 'missing name' });
+
+    var now = new Date();
+    var row = clientId ? findRowByClientId_(sheet, clientId) : 0;
+
+    if (row > 0) {
+      // update existing attendee — keep latest status
+      sheet.getRange(row, COL.name).setValue(name);
+      sheet.getRange(row, COL.status).setValue(status);
+      sheet.getRange(row, COL.updated).setValue(now);
+      sheet.getRange(row, COL.source).setValue(String(p.source || ''));
+      sheet.getRange(row, COL.ua).setValue(String(p.userAgent || ''));
+    } else {
+      sheet.appendRow([
+        now,                              // First Seen
+        name,                             // Name
+        status,                           // Status
+        now,                              // Last Updated
+        clientId,                         // Client ID
+        String(p.source || ''),           // Source
+        String(p.userAgent || '')         // User Agent
+      ]);
     }
-
-    sheet.appendRow([
-      new Date(),                       // timestamp (server time)
-      name,                             // attendee name
-      String(params.source || ''),      // e.g. "qr-card"
-      String(params.userAgent || '')    // device hint
-    ]);
-
-    lock.releaseLock();
-    return json_({ ok: true });
+    return json_({ ok: true, status: status });
   } catch (err) {
     return json_({ ok: false, error: String(err) });
+  } finally {
+    lock.releaseLock();
   }
 }
 
-/** Optional: lets you open the /exec URL in a browser to confirm it's live. */
+/** Open the /exec URL in a browser to confirm the service is live. */
 function doGet() {
-  return json_({ ok: true, service: 'ClinicFlow RSVP', time: new Date().toISOString() });
+  return json_({ ok: true, service: 'ClinicFlow RSVP v2', time: new Date().toISOString() });
+}
+
+function findRowByClientId_(sheet, clientId) {
+  var last = sheet.getLastRow();
+  if (last < 2) return 0;
+  var ids = sheet.getRange(2, COL.clientId, last - 1, 1).getValues();
+  for (var i = 0; i < ids.length; i++) {
+    if (String(ids[i][0]) === clientId) return i + 2;
+  }
+  return 0;
 }
 
 function getSheet_() {
@@ -56,14 +82,13 @@ function getSheet_() {
   var sheet = ss.getSheetByName(SHEET_NAME);
   if (!sheet) {
     sheet = ss.insertSheet(SHEET_NAME);
-    sheet.appendRow(['Timestamp', 'Name', 'Source', 'User Agent']);
+    sheet.appendRow(HEADERS);
     sheet.setFrozenRows(1);
+    sheet.getRange(1, 1, 1, HEADERS.length).setFontWeight('bold');
   }
   return sheet;
 }
 
 function json_(obj) {
-  return ContentService
-    .createTextOutput(JSON.stringify(obj))
-    .setMimeType(ContentService.MimeType.JSON);
+  return ContentService.createTextOutput(JSON.stringify(obj)).setMimeType(ContentService.MimeType.JSON);
 }

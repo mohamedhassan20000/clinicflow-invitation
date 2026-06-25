@@ -1,58 +1,47 @@
 # ClinicFlow CRM — Physical Invitation Card
 
-Print-ready artwork for the printed invitation. Design direction: **"Observatory" —
-Midnight Blue + Silver** (matches the RSVP website).
+Print artwork for the printed invitation. Design language: **Midnight Blue + Silver**,
+matching the RSVP website.
 
-> ⚠️ **DRAFT — QR pending.** The back currently shows a **QR placeholder**. The real
-> QR is added only after the live RSVP URL is **confirmed and tested**, then the
-> final print PDF is re-exported. Do not send to print until then.
+> **Current status: choosing a concept.** The card was **redesigned from scratch** and
+> the **QR code has been removed** — the card now stands on its own as a premium
+> invitation piece. Three concepts are in [`concepts/`](concepts/); once one is chosen,
+> it becomes the final `card.html` and the print-ready PDF is exported.
 
-## Files
+## Concepts (front side) — pick one
 
-| File | Purpose |
-|---|---|
-| `card.html` + `card.css` | **Source design file** — editable, version-controlled. Open in a browser to preview. |
-| `exports/card-front.png` | Front preview image (1512×2088) |
-| `exports/card-back.png` | Back preview image (1512×2088) |
-| `exports/ClinicFlow-CRM-invitation-card.pdf` | 2-page print PDF (front, back), full bleed |
-| `exports/ClinicFlow-CRM-card_GUIDES.pdf` | Same, with trim (green) + safe-area (pink) guides for the print shop |
+| Concept | Direction | Preview |
+|---|---|---|
+| **1 — Aperture** | Centered keynote; deep negative space; luminous focal mark | `concepts/previews/concept-c1.png` |
+| **2 — Editorial Index** | Asymmetric magazine; oversized wordmark; numbered presenters | `concepts/previews/concept-c2.png` |
+| **3 — Signal** *(recommended)* | Data-stream / tech-launch; presenter chips; matches the website | `concepts/previews/concept-c3.png` |
 
-## Print specification
+Source: [`concepts/concepts.html`](concepts/concepts.html) + [`concepts/concepts.css`](concepts/concepts.css).
+View all three in a browser, or isolate one with `?only=c1|c2|c3`.
 
-- **Trim size:** 5 × 7 in (127 × 178 mm), portrait
+## Print specification (applies to the final card)
+
+- **Trim:** 5 × 7 in (127 × 178 mm), portrait
 - **Bleed:** 0.125 in (3 mm) all sides → **artboard 5.25 × 7.25 in** (PDF page size)
 - **Safe area:** keep text ≥ 0.1875 in (≈5 mm) inside trim
-- **No outer border** (by design — edge interest comes from the bleeding field + motif)
-- **Stock (recommended):** 350 gsm soft-touch matte
-- **Premium upgrade:** silver foil on the "ClinicFlow CRM" wordmark, CF monogram, and
-  hairlines (biggest "doesn't look AI-generated" lever)
-- **QR (back):** print **dark-on-ivory** (not silver-on-navy), ≥ 1.4 in, error-correction
-  level H, ≥ 4-module quiet zone. Always keep the text URL fallback beneath it.
+- **No outer border**, **no QR**
+- **Logistics** (Date / Time / Location) carry **minimalist line icons**
+- **Stock:** 350 gsm soft-touch matte recommended
+- **Premium upgrade:** silver foil on the wordmark + hairlines
 
-## Re-exporting
+## Re-exporting (after a concept is chosen)
 
-Requires Google Chrome. From this folder:
+Requires Google Chrome:
 
 ```bash
 CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
-
-# Front / back PNG previews
-"$CHROME" --headless=new --force-device-scale-factor=3 --window-size=504,696 \
-  --screenshot="exports/card-front.png" "file://$PWD/card.html?only=front"
-"$CHROME" --headless=new --force-device-scale-factor=3 --window-size=504,696 \
-  --screenshot="exports/card-back.png" "file://$PWD/card.html?only=back"
-
-# Print-ready 2-page PDF
-"$CHROME" --headless=new --no-pdf-header-footer \
-  --print-to-pdf="exports/ClinicFlow-CRM-invitation-card.pdf" "file://$PWD/card.html"
+# Front preview PNG (per concept)
+"$CHROME" --headless=new --force-device-scale-factor=2.5 --window-size=504,696 \
+  --screenshot="concepts/previews/concept-c3.png" "file://$PWD/concepts/concepts.html?only=c3"
 ```
 
-URL params: `?guides=1` shows trim/safe overlay · `?only=front|back` isolates one side.
+## Deprecated
 
-## Note on color (CMYK)
-
-These exports are RGB (Chrome). Most local print shops accept high-res RGB PDF and
-convert, but for a press run ask the shop whether they want CMYK — if so, the
-`card.html` can be opened in Illustrator/Affinity/Inkscape and exported as CMYK
-PDF/X-1a, using the CMYK values in the project design plan (Midnight ≈ C100 M86 Y34 K30;
-Silver = Pantone 877 C for foil).
+`card.html`, `card.css`, and `exports/` contain the **older single-presenter version
+with a QR placeholder** and are kept only for reference. They will be replaced by the
+chosen concept. Do not print them.

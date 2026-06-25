@@ -75,10 +75,20 @@ This is what makes attendance actually get recorded — at zero cost.
    RSVP_ENDPOINT: "https://script.google.com/macros/s/AKfy.../exec",
    ```
 7. **Test** — open the site, submit a name, then check the Sheet: a new row
-   (Timestamp, Name, Source, User Agent) should appear within a second or two.
+   (`First Seen`, `Name`, `Status`, `Last Updated`, `Client ID`, `Source`, `User Agent`)
+   should appear within a second or two.
 
 > **Re-deploying:** if you later edit `Code.gs`, do **Deploy → Manage deployments
 > → edit (pencil) → Version: New version → Deploy**. The `/exec` URL stays the same.
+
+### RSVP status: cancel & reconfirm
+Attendees can change their mind from the confirmation page:
+- **Cancel attendance** → status becomes `Cancelled` (the row is **never deleted**).
+- **Confirm attendance again** → status returns to `Attending`.
+
+The Sheet keeps **one row per attendee** (keyed by a random `Client ID` stored in the
+visitor's browser) and always reflects the **latest status** plus a `Last Updated`
+timestamp. So your guest list is simply the rows where `Status = Attending`.
 
 ### Why "no-cors" / optimistic UI
 Apps Script web apps don't return CORS headers the browser can read, so the site
@@ -114,12 +124,12 @@ guest list — verify it there.
 
 ---
 
-## 5. ⚠️ Lock the URL before printing the QR
+## 5. Physical card
 
-The QR on the physical card must encode the **final live URL**. Decide between the
-`github.io` URL and a custom domain **before** generating the QR — reprinting is
-the only expensive mistake here. Always print the URL as text under the QR as a
-fallback. (QR generation + card artwork come in the next phase.)
+The printed invitation has been **redesigned to stand on its own with no QR code**.
+Three from-scratch concepts live in [`card/concepts/`](card/concepts/) — see
+[`card/README.md`](card/README.md). The card directs guests to the event in person;
+the RSVP website is shared separately (e.g. via the live URL / messaging).
 
 ---
 

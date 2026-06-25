@@ -7,8 +7,8 @@ window.CONFIG = {
   /* ------------------------------------------------------------------
      1) RSVP endpoint — your deployed Google Apps Script Web App URL.
         Looks like: https://script.google.com/macros/s/AKfy.../exec
-        Leave as "" to run the site in DEMO mode (no network write,
-        confirmation still works, RSVP saved to localStorage only).
+        Leave as "" to run the site in DEMO mode (no network write;
+        cancel/reconfirm still work locally via localStorage).
         See README.md → "Google Sheets + Apps Script setup".
      ------------------------------------------------------------------ */
   RSVP_ENDPOINT: "",
@@ -21,7 +21,7 @@ window.CONFIG = {
     project: "ClinicFlow CRM",
     title: "ClinicFlow CRM – Clinic Management System",
     description: "Clinic Management CRM Web Application",
-    presenter: "Mohamed Ibrahim",
+    presenters: ["Mohamed Ibrahim", "Osama Talal", "Mohamed Seif"],
     university: "Üsküdar University",
     location: "Hall C-Aziz Sancar, Üsküdar University",
     start: "2026-06-29T14:00:00+03:00", // 29 June 2026, 2:00 PM (TR)
