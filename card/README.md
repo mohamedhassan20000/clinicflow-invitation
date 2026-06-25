@@ -17,6 +17,7 @@ Open **[`card/index.html`](index.html)** in a browser (or on the live site at
 | **Salim** (`?v=salim`) | Dr. Salim Jibrin Danbatta | Formal invitation + supervision line. |
 | **Faezeh** (`?v=faezeh`) | Dr. Faezeh Rohani (advisor) | Gratitude-led invitation addressed to her directly (no supervision line). |
 | **General** (`?v=general`) | “Dear Guest” | General invitation + supervision line. |
+| **Gehad** (`?v=gehad`) | Gehad Ali (life partner & future wife) | Personal, heartfelt invitation (no supervision line). |
 
 The **back is identical** on all three: CF monogram, an honour line, the QR code
 (level H → live RSVP site), and the event footer.
