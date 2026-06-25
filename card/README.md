@@ -9,7 +9,7 @@ tech-launch, **Midnight Blue + Silver**, matching the RSVP website.
 |---|---|
 | `card.html` + `card.css` | **Source design file** — final front + back. Open in a browser to preview. |
 | `qr/clinicflow-qr.svg` / `.png` | QR code (level H) → the live RSVP site. Embedded on the back. |
-| `assets/flowfield-front.svg` / `-back.svg` | Generated flow-field background graphics. |
+| `assets/flowfield-front.svg` / `-back.svg` | Generated signal-arc background graphics. |
 | `exports/card-front.png` | Front preview (1512×2088) |
 | `exports/card-back.png` | Back preview (1512×2088) |
 | `exports/ClinicFlow-CRM-invitation-card.pdf` | **Print-ready** 2-page PDF (front, back), full bleed |
@@ -21,7 +21,7 @@ tech-launch, **Midnight Blue + Silver**, matching the RSVP website.
 - **Front (Signal):** refined "Graduation Showcase 2026" lockup → kicker → gradient
   "ClinicFlow **CRM**" wordmark → subtitle → **centered presenter medallions**
   (Mohamed Ibrahim · Osama Talal · Mohamed Seif) → glass logistics strip with
-  **minimalist line icons** for Date / Time / Location. Generated **flow-field**
+  **minimalist line icons** for Date / Time / Location. Generated **signal-arc**
   data-flow background + soft lighting.
 - **Back (integrated QR):** CF monogram → wordmark → framed QR plate with corner
   brackets and an embedded CF mark → scan text + URL fallback → event line →

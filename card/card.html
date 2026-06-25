@@ -89,10 +89,21 @@
     <div class="guides"><div class="trim"></div><div class="safe"></div></div>
   </section>
 
+  <!-- Screen-only: download the print-ready PDF (hidden in print + export modes) -->
+  <a class="dl-btn" id="dl-btn" href="exports/ClinicFlow-CRM-invitation-card.pdf"
+     download="ClinicFlow-CRM-invitation-card.pdf">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M8 11l4 4 4-4M5 21h14"/></svg>
+    Download as PDF
+  </a>
+
   <script>
     var p = new URLSearchParams(location.search);
     if (p.get('guides') === '1') document.body.classList.add('show-guides');
     var only = p.get('only');
+    var dl = document.getElementById('dl-btn');
+    if (only === 'front' || only === 'back' || p.get('guides') === '1') {
+      if (dl) dl.style.display = 'none'; // keep button out of exported images
+    }
     if (only === 'front' || only === 'back') {
       document.body.style.cssText = 'margin:0;padding:0;display:block;background:#fff;';
       ['front','back'].forEach(function (id) { if (id !== only) { var el = document.getElementById(id); if (el) el.style.display = 'none'; } });

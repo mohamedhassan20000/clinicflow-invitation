@@ -174,6 +174,22 @@ body { font-family: var(--sans); background: #2a2a2a; }
 .back .b-foot .evt { font-size: 7.5pt; letter-spacing: 0.18em; text-transform: uppercase; color: var(--slate); margin: 0; }
 .back .b-foot .place { font-family: var(--serif); font-size: 12.5pt; color: var(--platinum); margin: 0; }
 
+/* ---- Download-as-PDF button (screen only) ---- */
+.dl-btn {
+  position: fixed; right: 22px; bottom: 22px; z-index: 50;
+  display: inline-flex; align-items: center; gap: 9px;
+  padding: 13px 20px; border-radius: 999px;
+  font: 600 14px/1 var(--sans); letter-spacing: 0.01em;
+  color: #0A1733; text-decoration: none;
+  background: linear-gradient(135deg, #FFFFFF, #D7DEEA);
+  box-shadow: 0 10px 30px -8px rgba(0,0,0,.55), inset 0 0 0 1px rgba(255,255,255,.5);
+  transition: transform .15s ease, box-shadow .2s ease;
+}
+.dl-btn:hover { transform: translateY(-2px); box-shadow: 0 16px 38px -8px rgba(0,0,0,.6); }
+.dl-btn:active { transform: translateY(0); }
+.dl-btn svg { width: 18px; height: 18px; fill: none; stroke: #0A1733; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+@media print { .dl-btn { display: none !important; } }
+
 /* ---- guides overlay (preview only) ---- */
 .guides { position: absolute; inset: 0; z-index: 9; pointer-events: none; display: none; }
 body.show-guides .guides { display: block; }
