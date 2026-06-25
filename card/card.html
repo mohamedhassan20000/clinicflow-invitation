@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ClinicFlow CRM — Invitation Card (Front &amp; Back)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="card.css" />
+</head>
+<body>
+
+  <!-- ============ FRONT ============ -->
+  <section class="card-page front" id="front">
+    <svg class="motif motif--tr" viewBox="0 0 360 360" aria-hidden="true">
+      <g>
+        <line x1="40" y1="60" x2="150" y2="30"/><line x1="150" y1="30" x2="250" y2="90"/>
+        <line x1="250" y1="90" x2="330" y2="40"/><line x1="150" y1="30" x2="120" y2="140"/>
+        <line x1="120" y1="140" x2="250" y2="90"/><line x1="250" y1="90" x2="300" y2="180"/>
+        <line x1="120" y1="140" x2="60" y2="210"/><line x1="60" y1="210" x2="170" y2="230"/>
+        <line x1="170" y1="230" x2="300" y2="180"/><line x1="170" y1="230" x2="210" y2="320"/>
+        <line x1="40" y1="60" x2="120" y2="140"/>
+      </g>
+      <g>
+        <circle cx="40" cy="60" r="2.4"/><circle cx="150" cy="30" r="3"/><circle cx="250" cy="90" r="2.6"/>
+        <circle cx="330" cy="40" r="2"/><circle cx="120" cy="140" r="2.8"/><circle cx="300" cy="180" r="2.4"/>
+        <circle cx="60" cy="210" r="2.2"/><circle cx="170" cy="230" r="3"/><circle cx="210" cy="320" r="2.2"/>
+      </g>
+    </svg>
+
+    <div class="inner" style="justify-content: space-between;">
+      <div class="front-top">
+        <p class="eyebrow">Üsküdar University · Graduation Project</p>
+        <span class="monogram">CF</span>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:0.14in;">
+        <h1 class="hero">ClinicFlow<br>CRM</h1>
+        <hr class="rule" />
+        <p class="title">ClinicFlow CRM – Clinic Management System</p>
+        <p class="presenter">Presented by <strong>Mohamed Ibrahim</strong></p>
+      </div>
+
+      <ul class="logistics">
+        <li><span class="lbl">Date</span><span class="val">29 June 2026</span></li>
+        <li><span class="lbl">Time</span><span class="val">2:00 PM</span></li>
+        <li class="full"><span class="lbl">Hall / Room</span><span class="val">C-Aziz Sancar</span></li>
+      </ul>
+
+      <div>
+        <hr class="rule" style="margin-bottom:0.16in;" />
+        <p class="invite">You are warmly invited to the presentation and defense of my graduation project.</p>
+      </div>
+    </div>
+
+    <div class="guides"><div class="trim"></div><div class="safe"></div></div>
+  </section>
+
+  <!-- ============ BACK ============ -->
+  <section class="card-page back" id="back">
+    <svg class="motif motif--bl" viewBox="0 0 360 360" aria-hidden="true">
+      <g>
+        <line x1="30" y1="300" x2="120" y2="260"/><line x1="120" y1="260" x2="210" y2="300"/>
+        <line x1="120" y1="260" x2="90" y2="160"/><line x1="90" y1="160" x2="200" y2="180"/>
+        <line x1="200" y1="180" x2="210" y2="300"/><line x1="90" y1="160" x2="40" y2="90"/>
+      </g>
+      <g>
+        <circle cx="30" cy="300" r="2.4"/><circle cx="120" cy="260" r="3"/><circle cx="210" cy="300" r="2.4"/>
+        <circle cx="90" cy="160" r="2.8"/><circle cx="200" cy="180" r="2.4"/><circle cx="40" cy="90" r="2"/>
+      </g>
+    </svg>
+
+    <div class="inner" style="justify-content: space-between;">
+      <p class="eyebrow back-eyebrow">Confirm your attendance</p>
+
+      <div class="qr-frame">
+        <div class="qr-box">
+          <span class="qr-ph-mono">CF</span>
+          <span class="qr-ph-label">QR PLACEHOLDER<br><span style="font-weight:500; letter-spacing:.02em;">added after URL is confirmed</span></span>
+        </div>
+      </div>
+
+      <div style="display:flex; flex-direction:column; align-items:center; gap:0.12in;">
+        <p class="scan-text">Scan to confirm your attendance and get event details.</p>
+        <p class="scan-sub" id="url-fallback">mohamedhassan20000.github.io/clinicflow-invitation</p>
+      </div>
+
+      <div class="back-brand">
+        <span class="bmono">CF</span>
+        <span class="blabel">ClinicFlow CRM · 2026</span>
+      </div>
+    </div>
+
+    <div class="guides"><div class="trim"></div><div class="safe"></div></div>
+  </section>
+
+  <script>
+    // ?guides=1 → show trim/safe overlay (preview only)
+    // ?only=front | ?only=back → isolate one side and fill viewport (for screenshots)
+    var p = new URLSearchParams(location.search);
+    if (p.get('guides') === '1') document.body.classList.add('show-guides');
+    var only = p.get('only');
+    if (only === 'front' || only === 'back') {
+      document.body.style.cssText = 'margin:0;padding:0;display:block;background:#fff;';
+      ['front','back'].forEach(function (id) {
+        if (id !== only) { var el = document.getElementById(id); if (el) el.style.display = 'none'; }
+      });
+      var keep = document.getElementById(only);
+      if (keep) keep.style.boxShadow = 'none';
+    }
+  </script>
+</body>
+</html>
