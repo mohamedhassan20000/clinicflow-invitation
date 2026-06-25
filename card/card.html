@@ -14,24 +14,15 @@
   <!-- ============ FRONT — SIGNAL ============ -->
   <section class="card-page front" id="front">
     <div class="stream-light"></div>
-    <svg class="stream" viewBox="0 0 504 696" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-      <g stroke="#C7CEDB" fill="none" stroke-width="0.7">
-        <path d="M-20 96 C 120 44, 230 156, 380 92 S 560 60, 620 124" opacity="0.42"/>
-        <path d="M-20 148 C 130 116, 250 208, 410 156 S 560 132, 620 188" opacity="0.30"/>
-        <path d="M-20 60 C 150 18, 260 84, 420 40 S 580 30, 620 72" opacity="0.22"/>
-      </g>
-      <g fill="#9DB4E6">
-        <circle cx="120" cy="66" r="2.2"/><circle cx="230" cy="132" r="2.6"/><circle cx="380" cy="90" r="2.2"/>
-        <circle cx="410" cy="156" r="2"/><circle cx="250" cy="196" r="2.2"/><circle cx="150" cy="36" r="1.8"/>
-      </g>
-      <g fill="#7FA8FF">
-        <circle cx="380" cy="90" r="4.6" opacity="0.5"/><circle cx="230" cy="132" r="5" opacity="0.45"/>
-      </g>
-    </svg>
+    <img class="flow" src="assets/flowfield-front.svg" alt="" aria-hidden="true" />
 
     <div class="inner">
       <div class="head">
-        <span class="badge"><span class="dot"></span>Graduation Showcase 2026</span>
+        <span class="showcase">
+          <span class="tick"></span>
+          <span class="txt"><span class="dot"></span>Graduation&nbsp;Showcase</span>
+          <span class="yr">2026</span>
+        </span>
         <p class="kicker">Üsküdar University · Software Engineering</p>
         <h1 class="wordmark">ClinicFlow <span class="accent">CRM</span></h1>
         <p class="subtitle">Clinic Management CRM Web Application</p>
@@ -39,10 +30,10 @@
 
       <div class="presenters">
         <p class="lbl">Presented by</p>
-        <div class="chips">
-          <span class="chip"><span class="ini">MI</span>Mohamed Ibrahim</span>
-          <span class="chip"><span class="ini">OT</span>Osama Talal</span>
-          <span class="chip"><span class="ini">MS</span>Mohamed Seif</span>
+        <div class="pgrid">
+          <div class="person"><span class="ini">MI</span><span class="nm">Mohamed<br>Ibrahim</span></div>
+          <div class="person"><span class="ini">OT</span><span class="nm">Osama<br>Talal</span></div>
+          <div class="person"><span class="ini">MS</span><span class="nm">Mohamed<br>Seif</span></div>
         </div>
       </div>
 
@@ -65,29 +56,36 @@
     <div class="guides"><div class="trim"></div><div class="safe"></div></div>
   </section>
 
-  <!-- ============ BACK — BRANDING ============ -->
+  <!-- ============ BACK — INTEGRATED QR ============ -->
   <section class="card-page back" id="back">
     <div class="stream-light"></div>
-    <svg class="stream" viewBox="0 0 504 696" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-      <g stroke="#C7CEDB" fill="none" stroke-width="0.6" opacity="0.5">
-        <path d="M-20 150 C 150 110, 354 110, 524 150" opacity="0.22"/>
-        <path d="M-20 560 C 150 600, 354 600, 524 560" opacity="0.18"/>
-      </g>
-      <g fill="#9DB4E6" opacity="0.6">
-        <circle cx="120" cy="135" r="1.8"/><circle cx="252" cy="120" r="2.2"/><circle cx="384" cy="135" r="1.8"/>
-        <circle cx="252" cy="582" r="2"/>
-      </g>
-    </svg>
+    <img class="flow" src="assets/flowfield-back.svg" alt="" aria-hidden="true" />
 
     <div class="inner">
-      <span class="mono">CF</span>
-      <h2 class="wordmark">ClinicFlow <span class="accent">CRM</span></h2>
-      <p class="subtitle">Clinic Management CRM Web Application</p>
-      <div class="divider"></div>
-      <p class="event-line">GRADUATION SHOWCASE · 29 JUNE 2026 · ÜSKÜDAR UNIVERSITY</p>
-      <p class="place">Hall C-Aziz Sancar</p>
+      <div class="b-top">
+        <span class="mono">CF</span>
+        <p class="b-word">ClinicFlow <span class="accent">CRM</span></p>
+      </div>
+
+      <div class="qr-assembly">
+        <span class="qr-eyebrow">Confirm your attendance</span>
+        <div class="qr-plate">
+          <div class="qr-tile">
+            <img src="qr/clinicflow-qr.svg" alt="QR code linking to the RSVP website" />
+            <span class="qr-mono">CF</span>
+          </div>
+        </div>
+        <div>
+          <p class="scan-text">Scan to confirm your attendance &amp; get event details.</p>
+          <p class="scan-url">mohamedhassan20000.github.io/clinicflow-invitation</p>
+        </div>
+      </div>
+
+      <div class="b-foot">
+        <p class="evt">Graduation Showcase · 29 June 2026</p>
+        <p class="place">Hall C-Aziz Sancar · Üsküdar University</p>
+      </div>
     </div>
-    <p class="year">ClinicFlow CRM · 2026</p>
 
     <div class="guides"><div class="trim"></div><div class="safe"></div></div>
   </section>

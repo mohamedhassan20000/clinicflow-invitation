@@ -1,13 +1,15 @@
 # ClinicFlow CRM — Physical Invitation Card (FINAL)
 
-Print artwork for the printed invitation. Concept: **"Signal"** — data-stream /
-tech-launch, **Midnight Blue + Silver**, matching the RSVP website. **No QR code.**
+Print artwork for the printed invitation. Concept: **"Signal"** — data-flow /
+tech-launch, **Midnight Blue + Silver**, matching the RSVP website.
 
 ## Files
 
 | File | Purpose |
 |---|---|
 | `card.html` + `card.css` | **Source design file** — final front + back. Open in a browser to preview. |
+| `qr/clinicflow-qr.svg` / `.png` | QR code (level H) → the live RSVP site. Embedded on the back. |
+| `assets/flowfield-front.svg` / `-back.svg` | Generated flow-field background graphics. |
 | `exports/card-front.png` | Front preview (1512×2088) |
 | `exports/card-back.png` | Back preview (1512×2088) |
 | `exports/ClinicFlow-CRM-invitation-card.pdf` | **Print-ready** 2-page PDF (front, back), full bleed |
@@ -16,21 +18,33 @@ tech-launch, **Midnight Blue + Silver**, matching the RSVP website. **No QR code
 
 ## Design
 
-- **Front (Signal):** status badge → kicker → gradient "ClinicFlow **CRM**" wordmark →
-  subtitle → presenter chips (Mohamed Ibrahim · Osama Talal · Mohamed Seif) → glass
-  logistics strip with **minimalist line icons** for Date / Time / Location. Subtle
-  flowing data-stream lines + soft lighting in the background.
-- **Back (branding):** CF monogram → wordmark → tagline → event line
-  (Graduation Showcase · 29 June 2026 · Üsküdar University) → Hall C-Aziz Sancar.
+- **Front (Signal):** refined "Graduation Showcase 2026" lockup → kicker → gradient
+  "ClinicFlow **CRM**" wordmark → subtitle → **centered presenter medallions**
+  (Mohamed Ibrahim · Osama Talal · Mohamed Seif) → glass logistics strip with
+  **minimalist line icons** for Date / Time / Location. Generated **flow-field**
+  data-flow background + soft lighting.
+- **Back (integrated QR):** CF monogram → wordmark → framed QR plate with corner
+  brackets and an embedded CF mark → scan text + URL fallback → event line →
+  Hall C-Aziz Sancar. Flow-field bands top & bottom, centre kept clear for the QR.
+
+## QR code
+
+- Encodes **https://mohamedhassan20000.github.io/clinicflow-invitation/**
+- **Error-correction level H** (version 7, 45×45 modules) — survives the centre logo.
+- Dark `#0A1733` modules on an ivory `#F4F6FA` tile → **16.4:1 contrast** (verified).
+- ✅ Decodes correctly from the exported back artwork, including with the CF logo.
+- To re-generate (e.g. if the URL changes): see `qr/` and use the `qrcode` npm package
+  at level H, then re-export. **Reprinting is the only costly mistake — keep the URL stable.**
 
 ## Print specification
 
 - **Trim:** 5 × 7 in (127 × 178 mm), portrait
 - **Bleed:** 0.125 in (3 mm) all sides → **artboard 5.25 × 7.25 in** (PDF page size) ✓ verified
-- **Safe area:** text kept ≥ 0.1875 in (≈5 mm) inside trim
-- **No outer border · No QR**
+- **Safe area:** text kept ≥ 0.1875 in (≈5 mm) inside trim ✓ verified via guides
+- **No outer border**
 - **Stock:** 350 gsm soft-touch matte recommended
-- **Premium upgrade:** silver foil on the wordmark, monogram, and hairlines
+- **Premium upgrade:** silver foil on the wordmark, monogram, and hairlines (keep the
+  QR as flat dark ink on ivory — do **not** foil the QR, it harms scanning)
 
 ## Re-exporting
 
