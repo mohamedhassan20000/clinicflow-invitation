@@ -126,10 +126,11 @@ guest list — verify it there.
 
 ## 5. Physical card
 
-The printed invitation has been **redesigned to stand on its own with no QR code**.
-Three from-scratch concepts live in [`card/concepts/`](card/concepts/) — see
-[`card/README.md`](card/README.md). The card directs guests to the event in person;
-the RSVP website is shared separately (e.g. via the live URL / messaging).
+The printed invitation **stands on its own with no QR code**. Final concept: **"Signal"**
+(front + branding back) — print-ready PDF in [`card/exports/`](card/exports/), source in
+[`card/card.html`](card/card.html), details in [`card/README.md`](card/README.md). The
+three explored concepts are kept in [`card/concepts/`](card/concepts/). The card directs
+guests to the event in person; the RSVP website is shared separately (live URL / messaging).
 
 ---
 
