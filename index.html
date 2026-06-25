@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>ClinicFlow CRM — Graduation Presentation Invitation</title>
+  <meta name="description" content="You are invited to the graduation presentation of ClinicFlow CRM by Mohamed Ibrahim, Üsküdar University — 29 June 2026, 2:00 PM, Hall C-Aziz Sancar." />
+  <meta name="color-scheme" content="dark light" />
+  <meta name="theme-color" content="#0B1B3B" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="ClinicFlow CRM — Graduation Presentation" />
+  <meta property="og:description" content="Confirm your attendance and get event details — 29 June 2026, 2:00 PM, Üsküdar University." />
+
+  <!-- Fonts: Cormorant Garamond (display) + Inter (UI). Swap for self-hosted subset later. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <!-- Background constellation motif (decorative) -->
+  <div class="motif" aria-hidden="true">
+    <svg class="motif__svg" viewBox="0 0 600 800" preserveAspectRatio="xMidYMid slice" focusable="false">
+      <g class="motif__lines"></g>
+      <g class="motif__nodes"></g>
+    </svg>
+  </div>
+
+  <header class="site-header">
+    <span class="monogram" aria-hidden="true">CF</span>
+    <span class="site-header__name">ClinicFlow&nbsp;CRM</span>
+  </header>
+
+  <main id="main" class="stage">
+
+    <!-- ================= STATE 1 — INVITE ================= -->
+    <section class="screen screen--invite is-active" id="screen-invite" aria-labelledby="invite-heading">
+      <p class="eyebrow">Üsküdar University · Graduation Project</p>
+      <h1 class="display" id="invite-heading">ClinicFlow&nbsp;CRM</h1>
+      <p class="lede">Clinic Management CRM Web Application</p>
+      <p class="presenter">Presented by <strong>Mohamed Ibrahim</strong></p>
+
+      <ul class="logistics" aria-label="Event details">
+        <li class="chip">
+          <svg class="chip__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>
+          <span><span class="chip__label">Date</span>29 June 2026</span>
+        </li>
+        <li class="chip">
+          <svg class="chip__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <span><span class="chip__label">Time</span>2:00 PM</span>
+        </li>
+        <li class="chip">
+          <svg class="chip__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <span><span class="chip__label">Hall</span>C-Aziz Sancar</span>
+        </li>
+      </ul>
+
+      <p class="invite-line">You are warmly invited to the presentation and defense of my graduation project.</p>
+
+      <button type="button" class="btn btn--primary" id="to-form-btn">
+        Confirm attendance
+        <svg class="btn__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+    </section>
+
+    <!-- ================= STATE 2 — RSVP FORM ================= -->
+    <section class="screen screen--form" id="screen-form" aria-labelledby="form-heading" hidden>
+      <p class="eyebrow">RSVP</p>
+      <h2 class="heading" id="form-heading">Reserve your seat</h2>
+      <p class="sub">Add your name to the guest list for the ClinicFlow CRM presentation.</p>
+
+      <form id="rsvp-form" novalidate>
+        <div class="field">
+          <label for="guest-name" class="field__label">Your name</label>
+          <input
+            type="text"
+            id="guest-name"
+            name="name"
+            class="field__input"
+            autocomplete="name"
+            inputmode="text"
+            maxlength="80"
+            placeholder="e.g. Dr. Ayşe Demir"
+            required
+            aria-describedby="name-help name-error"
+          />
+          <p class="field__help" id="name-help">Only used for the attendance list.</p>
+          <p class="field__error" id="name-error" role="alert" hidden>Please enter your name.</p>
+        </div>
+
+        <!-- Honeypot: hidden from humans, bots fill it -->
+        <div class="hp" aria-hidden="true">
+          <label for="company">Company</label>
+          <input type="text" id="company" name="company" tabindex="-1" autocomplete="off" />
+        </div>
+
+        <div class="form-actions">
+          <button type="button" class="btn btn--ghost" id="back-btn">Back</button>
+          <button type="submit" class="btn btn--primary" id="submit-btn">
+            <span class="btn__label">Confirm</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <!-- ================= STATE 3 — CONFIRMATION ================= -->
+    <section class="screen screen--confirm" id="screen-confirm" aria-labelledby="confirm-heading" hidden>
+      <div class="success" aria-hidden="true">
+        <svg class="success__ring" viewBox="0 0 80 80"><circle cx="40" cy="40" r="36"/></svg>
+        <svg class="success__check" viewBox="0 0 52 52"><path d="M14 27l8 8 16-18"/></svg>
+      </div>
+
+      <p class="eyebrow eyebrow--center">Attendance confirmed</p>
+      <h2 class="heading heading--center" id="confirm-heading">Welcome, <span id="guest-welcome">guest</span></h2>
+      <p class="sub sub--center" id="confirm-sub">Thank you for confirming. We can’t wait to present <strong>ClinicFlow CRM</strong> to you.</p>
+
+      <div class="card">
+        <p class="card__project">ClinicFlow CRM</p>
+        <p class="card__desc">Clinic Management CRM Web Application</p>
+        <p class="card__presenter">Presented by Mohamed Ibrahim · Üsküdar University</p>
+
+        <dl class="details">
+          <div class="details__row"><dt>Date</dt><dd>29 June 2026</dd></div>
+          <div class="details__row"><dt>Time</dt><dd>2:00 PM (GMT+3)</dd></div>
+          <div class="details__row"><dt>Location</dt><dd>Hall C-Aziz Sancar</dd></div>
+        </dl>
+      </div>
+
+      <div class="countdown" id="countdown" aria-label="Time remaining until the presentation">
+        <div class="countdown__unit"><span class="countdown__num" id="cd-days">00</span><span class="countdown__lbl">Days</span></div>
+        <div class="countdown__sep" aria-hidden="true">:</div>
+        <div class="countdown__unit"><span class="countdown__num" id="cd-hours">00</span><span class="countdown__lbl">Hours</span></div>
+        <div class="countdown__sep" aria-hidden="true">:</div>
+        <div class="countdown__unit"><span class="countdown__num" id="cd-mins">00</span><span class="countdown__lbl">Minutes</span></div>
+        <div class="countdown__sep" aria-hidden="true">:</div>
+        <div class="countdown__unit"><span class="countdown__num" id="cd-secs">00</span><span class="countdown__lbl">Seconds</span></div>
+      </div>
+      <p class="countdown__live" id="countdown-live" aria-live="polite"></p>
+
+      <div class="cal-actions">
+        <a href="#" class="btn btn--cal" id="gcal-btn" target="_blank" rel="noopener">
+          <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>
+          Add to Google Calendar
+        </a>
+        <button type="button" class="btn btn--cal" id="ical-btn">
+          <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M8 11l4 4 4-4"/><path d="M5 19h14"/></svg>
+          Add to Apple Calendar
+        </button>
+      </div>
+
+      <p class="thank-you">We look forward to seeing you there.</p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <span class="monogram monogram--sm" aria-hidden="true">CF</span>
+    <span>ClinicFlow CRM · 2026 · Üsküdar University</span>
+  </footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
