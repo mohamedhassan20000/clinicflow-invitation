@@ -9,11 +9,12 @@ Open **[`card/index.html`](index.html)** in a browser (or on the live site at
 `…/clinicflow-invitation/card/`) to download every card. Each version has separate
 **Front PDF** and **Back PDF** buttons (plus a “both sides” combined PDF).
 
-## The three versions
+## The versions
 
 | Version | Addressed to | Front message |
 |---|---|---|
-| **Kristin** (`?v=kristin`) | Professor Kristin Surpuhi Benli | Formal invitation + *“Under the supervision of Dr. Faezeh Rohani.”* |
+| **Kristin** (`?v=kristin`) | Dr. Kristin Surpuhi Benli | Formal invitation + *“Under the supervision of Dr. Faezeh Rohani.”* |
+| **Salim** (`?v=salim`) | Dr. Salim Jibrin Danbatta | Formal invitation + supervision line. |
 | **Faezeh** (`?v=faezeh`) | Dr. Faezeh Rohani (advisor) | Gratitude-led invitation addressed to her directly (no supervision line). |
 | **General** (`?v=general`) | “Dear Guest” | General invitation + supervision line. |
 

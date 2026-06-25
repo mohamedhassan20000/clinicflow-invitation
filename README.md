@@ -126,10 +126,10 @@ guest list — verify it there.
 
 ## 5. Physical card
 
-Final concept: **"Signal"** (front + integrated-QR back), in **three personalised
-versions** — for Prof. Kristin Surpuhi Benli, for advisor Dr. Faezeh Rohani, and a
-general “Dear Guest” card. Each front carries a tailored invitation message; the back
-(honour line + level-H QR → live RSVP site) is shared. **Download hub** with per-side
+Final concept: **"Signal"** (front + integrated-QR back), in **four personalised
+versions** — for Dr. Kristin Surpuhi Benli, Dr. Salim Jibrin Danbatta, advisor
+Dr. Faezeh Rohani, and a general “Dear Guest” card. Each front carries a tailored
+invitation message; the back (honour line + level-H QR → live RSVP site) is shared. **Download hub** with per-side
 PDF buttons: [`card/index.html`](card/index.html). Source + details:
 [`card/card.html`](card/card.html), [`card/README.md`](card/README.md).
 
