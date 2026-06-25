@@ -9,3 +9,10 @@ Thumbs.db
 # Dependencies / build output
 node_modules/
 dist/
+
+# Original presenter source photos — kept local only.
+# Only the cropped *-portrait.jpg (used by the site/card) are published,
+# since the originals are full-res candids that include bystanders.
+card/assets/photos/ibrahim.JPG
+card/assets/photos/talal.jpg
+card/assets/photos/seif.jpg

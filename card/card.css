@@ -99,11 +99,11 @@ body { font-family: var(--sans); background: #2a2a2a; }
 .front .pgrid { display: flex; justify-content: center; gap: 0.34in; }
 .front .person { display: flex; flex-direction: column; align-items: center; gap: 0.09in; width: 1.25in; }
 .front .person .ini {
-  display: grid; place-items: center; width: 0.56in; height: 0.56in; border-radius: 50%;
-  font-size: 9.5pt; font-weight: 700; letter-spacing: 0.01em; color: var(--midnight);
-  background: linear-gradient(140deg, #FFFFFF, var(--silver) 60%, #A9B8D4);
-  box-shadow: 0 0.06in 0.2in -0.06in rgba(120,160,230,.7), inset 0 0 0 1px rgba(255,255,255,.4);
+  width: 0.64in; height: 0.64in; border-radius: 50%; overflow: hidden; padding: 0;
+  border: 1.5px solid rgba(199,206,219,.6);
+  box-shadow: 0 0.06in 0.2in -0.06in rgba(120,160,230,.7), inset 0 0 0 2px rgba(10,23,51,.35);
 }
+.front .person .ini img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .front .person .nm { font-family: var(--serif); font-size: 12pt; font-weight: 600; color: var(--ivory); line-height: 1.15; }
 
 /* logistics strip */
