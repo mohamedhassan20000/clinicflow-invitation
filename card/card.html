@@ -6,7 +6,7 @@
   <title>ClinicFlow CRM — Invitation Card</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="card.css" />
 </head>
 <body>
@@ -147,7 +147,14 @@
         addressee: "To Gehad Ali,",
         body: "My life partner, my beautiful fiancée, and my future wife — it would mean the world to me to have you by my side at the formal defense of our graduation project, ClinicFlow CRM. Through every late night and every challenge, your love and support carried me here.",
         emph: "Sharing this milestone with you is what makes it truly mine.",
-        sup: ""
+        sup: "Under the supervision of Dr. Faezeh Rohani"
+      },
+      mother: {
+        addressee: "إلى أمي الحبيبة،",
+        body: "يا مَن أنسبُ إليكِ الفضلَ في حياتي كلّها — كلُّ تقدّمٍ أو خيرٍ أراه في طريقي هو ثمرةُ دعائكِ، ولولاكِ ما وصلتُ إلى هنا. يشرّفني ويسعدني أن أدعوكِ لحضور العرض التقديمي لمشروع تخرّجي، ClinicFlow CRM.",
+        emph: "وجودكِ بجانبي هو أغلى ما في هذا اليوم.",
+        sup: "تحت إشراف د. فايزة روحاني",
+        ar: true
       }
     };
 
@@ -160,6 +167,7 @@
     document.getElementById('msgEmph').textContent = data.emph;
     var sup = document.getElementById('msgSup');
     if (data.sup) { sup.textContent = data.sup; } else { sup.hidden = true; }
+    if (data.ar) document.getElementById('front').classList.add('ar');
 
     /* download button → this version's 2-page PDF */
     var dl = document.getElementById('dl-btn');

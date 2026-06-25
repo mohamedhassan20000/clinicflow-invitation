@@ -19,7 +19,8 @@ Open **[`card/index.html`](index.html)** in a browser (or on the live site at
 | **General** (`?v=general`) | “Dear Guest” | General invitation + supervision line. |
 | **Ali** (`?v=ali`) | Eng. Ali Edris | Formal invitation + supervision line. |
 | **Abdelrahman** (`?v=abdelrahman`) | Eng. Abdelrahman Mohamed | Formal invitation + supervision line. |
-| **Gehad** (`?v=gehad`) | Gehad Ali (life partner & future wife) | Personal, heartfelt invitation (no supervision line). |
+| **Gehad** (`?v=gehad`) | Gehad Ali (life partner & future wife) | Personal, heartfelt invitation + supervision line. |
+| **Mother** (`?v=mother`) | أمي الحبيبة (my beloved mother) | **Arabic** (RTL, Amiri) heartfelt invitation + supervision line. Only Arabic version. |
 
 The **back is identical** on all three: CF monogram, an honour line, the QR code
 (level H → live RSVP site), and the event footer.
