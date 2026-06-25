@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ClinicFlow CRM — Invitation Card (Final · Signal)</title>
+  <title>ClinicFlow CRM — Invitation Card</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -11,7 +11,7 @@
 </head>
 <body>
 
-  <!-- ============ FRONT — SIGNAL ============ -->
+  <!-- ============ FRONT ============ -->
   <section class="card-page front" id="front">
     <div class="stream-light"></div>
     <img class="flow" src="assets/flowfield-front.svg" alt="" aria-hidden="true" />
@@ -26,6 +26,13 @@
         <p class="kicker">Üsküdar University · Software Engineering</p>
         <h1 class="wordmark">ClinicFlow <span class="accent">CRM</span></h1>
         <p class="subtitle">Clinic Management CRM Web Application</p>
+      </div>
+
+      <div class="invite-msg">
+        <p class="addressee" id="addressee">Dear Guest,</p>
+        <p class="msg-body" id="msgBody"></p>
+        <p class="msg-emph" id="msgEmph"></p>
+        <p class="msg-sup" id="msgSup"></p>
       </div>
 
       <div class="presenters">
@@ -56,7 +63,7 @@
     <div class="guides"><div class="trim"></div><div class="safe"></div></div>
   </section>
 
-  <!-- ============ BACK — INTEGRATED QR ============ -->
+  <!-- ============ BACK ============ -->
   <section class="card-page back" id="back">
     <div class="stream-light"></div>
     <img class="flow" src="assets/flowfield-back.svg" alt="" aria-hidden="true" />
@@ -66,6 +73,8 @@
         <span class="mono">CF</span>
         <p class="b-word">ClinicFlow <span class="accent">CRM</span></p>
       </div>
+
+      <p class="honor">It would be our honor to have you join the presentation of our graduation project.</p>
 
       <div class="qr-assembly">
         <span class="qr-eyebrow">Confirm your attendance</span>
@@ -89,20 +98,54 @@
     <div class="guides"><div class="trim"></div><div class="safe"></div></div>
   </section>
 
-  <!-- Screen-only: download the print-ready PDF (hidden in print + export modes) -->
-  <a class="dl-btn" id="dl-btn" href="exports/ClinicFlow-CRM-invitation-card.pdf"
-     download="ClinicFlow-CRM-invitation-card.pdf">
+  <!-- Screen-only: download the print-ready PDF for this version -->
+  <a class="dl-btn" id="dl-btn" href="exports/general-card.pdf" download>
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M8 11l4 4 4-4M5 21h14"/></svg>
     Download as PDF
   </a>
 
   <script>
-    var p = new URLSearchParams(location.search);
-    if (p.get('guides') === '1') document.body.classList.add('show-guides');
-    var only = p.get('only');
+    /* ---- invitation copy per version (original phrasing) ---- */
+    var VERSIONS = {
+      kristin: {
+        addressee: "Dear Professor Kristin Surpuhi Benli,",
+        body: "It is our sincere honour to invite you to the formal defense of our graduation project, ClinicFlow CRM — the outcome of months of research, design, and engineering. We would be truly grateful to share this milestone with you and to welcome your insight and feedback.",
+        emph: "Your presence would be a genuine support and encouragement to our team.",
+        sup: "Under the supervision of Dr. Faezeh Rohani"
+      },
+      faezeh: {
+        addressee: "Dear Dr. Faezeh Rohani,",
+        body: "With heartfelt gratitude for your guidance, we are honoured to invite you to the formal defense of our graduation project, ClinicFlow CRM — a milestone that reflects the research and dedication you helped shape from the very beginning.",
+        emph: "Your presence would mean a great deal to our team — a true support and honour.",
+        sup: ""
+      },
+      general: {
+        addressee: "Dear Guest,",
+        body: "It is our pleasure to invite you to the formal defense of our graduation project, ClinicFlow CRM — the culmination of months of research, design, and engineering. We would be delighted to share this milestone with you and to welcome your presence and feedback.",
+        emph: "Your attendance alone is a genuine support to our team.",
+        sup: "Under the supervision of Dr. Faezeh Rohani"
+      }
+    };
+
+    var params = new URLSearchParams(location.search);
+    var v = (params.get('v') || 'general').toLowerCase();
+    if (!VERSIONS[v]) v = 'general';
+    var data = VERSIONS[v];
+    document.getElementById('addressee').textContent = data.addressee;
+    document.getElementById('msgBody').textContent = data.body;
+    document.getElementById('msgEmph').textContent = data.emph;
+    var sup = document.getElementById('msgSup');
+    if (data.sup) { sup.textContent = data.sup; } else { sup.hidden = true; }
+
+    /* download button → this version's 2-page PDF */
     var dl = document.getElementById('dl-btn');
-    if (only === 'front' || only === 'back' || p.get('guides') === '1') {
-      if (dl) dl.style.display = 'none'; // keep button out of exported images
+    if (dl) dl.setAttribute('href', 'exports/' + v + '-card.pdf');
+
+    /* export / guides handling */
+    if (params.get('guides') === '1') document.body.classList.add('show-guides');
+    var only = params.get('only');
+    if (only === 'front' || only === 'back' || params.get('guides') === '1') {
+      if (dl) dl.style.display = 'none';
     }
     if (only === 'front' || only === 'back') {
       document.body.style.cssText = 'margin:0;padding:0;display:block;background:#fff;';

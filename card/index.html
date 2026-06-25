@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>ClinicFlow CRM — Invitation Cards (Download)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --midnight:#0A1733; --indigo:#13284F; --silver:#C7CEDB; --platinum:#EAEEF6;
+      --ivory:#F4F6FA; --slate:#8B97AD; --glow:#5B86D6;
+      --serif:"Cormorant Garamond",Georgia,serif; --sans:"Inter",system-ui,sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100vh;font-family:var(--sans);color:var(--ivory);
+      background:radial-gradient(70% 50% at 78% 0%,rgba(91,134,214,.22),transparent 60%),
+                 radial-gradient(60% 50% at 10% 100%,rgba(40,70,140,.22),transparent 58%),#0A1733;
+      padding:clamp(22px,5vw,48px);}
+    .head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+    .mono{display:grid;place-items:center;width:38px;height:38px;border:1px solid rgba(199,206,219,.3);
+      border-radius:50%;font-family:var(--serif);font-weight:700;color:var(--platinum)}
+    h1{font-family:var(--serif);font-weight:600;font-size:clamp(1.7rem,5vw,2.4rem);margin:0;color:var(--platinum)}
+    .lead{color:var(--slate);max-width:60ch;margin:6px 0 28px;font-size:.95rem;line-height:1.5}
+    .grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));max-width:1100px}
+    .card{border:1px solid rgba(199,206,219,.16);border-radius:18px;background:rgba(16,30,60,.5);
+      padding:18px;backdrop-filter:blur(8px)}
+    .card h2{font-family:var(--serif);font-weight:600;font-size:1.3rem;margin:2px 0 2px;color:var(--platinum)}
+    .card .who{font-size:.82rem;color:var(--slate);margin:0 0 14px}
+    .thumbs{display:flex;gap:10px;margin-bottom:16px}
+    .thumbs a{flex:1;display:block;border-radius:10px;overflow:hidden;border:1px solid rgba(199,206,219,.14);
+      line-height:0;position:relative}
+    .thumbs img{width:100%;height:auto;display:block}
+    .thumbs .lab{position:absolute;left:8px;bottom:8px;font-size:.62rem;font-weight:600;letter-spacing:.1em;
+      text-transform:uppercase;color:var(--ivory);background:rgba(10,23,51,.7);padding:3px 7px;border-radius:6px}
+    .btns{display:flex;flex-wrap:wrap;gap:8px}
+    .btn{flex:1;min-width:90px;display:inline-flex;align-items:center;justify-content:center;gap:7px;
+      min-height:42px;padding:0 14px;border-radius:10px;font:600 .84rem var(--sans);text-decoration:none;
+      cursor:pointer;border:1px solid transparent;transition:transform .14s ease,box-shadow .2s ease,border-color .2s}
+    .btn:active{transform:scale(.98)}
+    .btn-front{background:linear-gradient(135deg,#fff,#D7DEEA);color:#0A1733;box-shadow:0 8px 22px -10px rgba(234,238,246,.5)}
+    .btn-back{background:rgba(255,255,255,.05);color:var(--ivory);border-color:rgba(199,206,219,.28)}
+    .btn-back:hover{border-color:var(--silver)}
+    .btn svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+    .both{margin-top:8px}
+    .both a{font-size:.8rem;color:var(--slate);text-decoration:none;border-bottom:1px solid rgba(139,151,173,.4)}
+    .both a:hover{color:var(--ivory)}
+    footer{margin-top:32px;color:var(--slate);font-size:.8rem}
+    .tip{margin-top:18px;font-size:.82rem;color:var(--slate);max-width:60ch;line-height:1.5}
+  </style>
+</head>
+<body>
+  <div class="head"><span class="mono">CF</span><h1>Invitation Cards</h1></div>
+  <p class="lead">Three versions of the ClinicFlow CRM invitation. Download each card’s
+    <strong style="color:var(--ivory)">front</strong> and <strong style="color:var(--ivory)">back</strong>
+    separately as print-ready PDF (5×7 in, full bleed). Tap a preview to open it full size.</p>
+
+  <div class="grid">
+    <!-- KRISTIN -->
+    <div class="card">
+      <h2>For Prof. Kristin</h2>
+      <p class="who">Addressed to Professor Kristin Surpuhi Benli</p>
+      <div class="thumbs">
+        <a href="card.html?v=kristin&only=front" target="_blank"><img src="exports/kristin-front.png" alt="Kristin card front"><span class="lab">Front</span></a>
+        <a href="card.html?v=kristin&only=back" target="_blank"><img src="exports/kristin-back.png" alt="Card back"><span class="lab">Back</span></a>
+      </div>
+      <div class="btns">
+        <a class="btn btn-front" href="exports/kristin-front.pdf" download><svg viewBox="0 0 24 24"><path d="M12 3v12M8 11l4 4 4-4M5 21h14"/></svg>Front PDF</a>
+        <a class="btn btn-back" href="exports/kristin-back.pdf" download><svg viewBox="0 0 24 24"><path d="M12 3v12M8 11l4 4 4-4M5 21h14"/></svg>Back PDF</a>
+      </div>
+      <p class="both"><a href="exports/kristin-card.pdf" download>↓ Both sides (1 PDF)</a></p>
+    </div>
+
+    <!-- FAEZEH -->
+    <div class="card">
+      <h2>For Dr. Faezeh</h2>
+      <p class="who">Addressed to Dr. Faezeh Rohani — project advisor</p>
+      <div class="thumbs">
+        <a href="card.html?v=faezeh&only=front" target="_blank"><img src="exports/faezeh-front.png" alt="Faezeh card front"><span class="lab">Front</span></a>
+        <a href="card.html?v=faezeh&only=back" target="_blank"><img src="exports/faezeh-back.png" alt="Card back"><span class="lab">Back</span></a>
+      </div>
+      <div class="btns">
+        <a class="btn btn-front" href="exports/faezeh-front.pdf" download><svg viewBox="0 0 24 24"><path d="M12 3v12M8 11l4 4 4-4M5 21h14"/></svg>Front PDF</a>
+        <a class="btn btn-back" href="exports/faezeh-back.pdf" download><svg viewBox="0 0 24 24"><path d="M12 3v12M8 11l4 4 4-4M5 21h14"/></svg>Back PDF</a>
+      </div>
+      <p class="both"><a href="exports/faezeh-card.pdf" download>↓ Both sides (1 PDF)</a></p>
+    </div>
+
+    <!-- GENERAL -->
+    <div class="card">
+      <h2>General</h2>
+      <p class="who">For any guest — “Dear Guest”</p>
+      <div class="thumbs">
+        <a href="card.html?v=general&only=front" target="_blank"><img src="exports/general-front.png" alt="General card front"><span class="lab">Front</span></a>
+        <a href="card.html?v=general&only=back" target="_blank"><img src="exports/general-back.png" alt="Card back"><span class="lab">Back</span></a>
+      </div>
+      <div class="btns">
+        <a class="btn btn-front" href="exports/general-front.pdf" download><svg viewBox="0 0 24 24"><path d="M12 3v12M8 11l4 4 4-4M5 21h14"/></svg>Front PDF</a>
+        <a class="btn btn-back" href="exports/general-back.pdf" download><svg viewBox="0 0 24 24"><path d="M12 3v12M8 11l4 4 4-4M5 21h14"/></svg>Back PDF</a>
+      </div>
+      <p class="both"><a href="exports/general-card.pdf" download>↓ Both sides (1 PDF)</a></p>
+    </div>
+  </div>
+
+  <p class="tip">For the print shop: 5 × 7 in trim, 3 mm bleed, double-sided. A guided proof
+    (trim + safe lines) is at <a href="exports/general-guides.pdf" download style="color:var(--silver)">general-guides.pdf</a>.
+    The back &amp; QR are identical on all three versions.</p>
+
+  <footer>ClinicFlow CRM · 2026 · Üsküdar University</footer>
+</body>
+</html>

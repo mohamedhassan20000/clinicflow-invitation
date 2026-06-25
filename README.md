@@ -126,12 +126,12 @@ guest list — verify it there.
 
 ## 5. Physical card
 
-Final concept: **"Signal"** (front + integrated-QR back). The back carries a
-**level-H QR code** (embedded CF mark) pointing to the live RSVP site, framed into the
-composition. Print-ready PDF in [`card/exports/`](card/exports/), source in
-[`card/card.html`](card/card.html), QR + backgrounds under [`card/qr/`](card/qr/) and
-[`card/assets/`](card/assets/), details in [`card/README.md`](card/README.md). The three
-explored concepts are kept in [`card/concepts/`](card/concepts/).
+Final concept: **"Signal"** (front + integrated-QR back), in **three personalised
+versions** — for Prof. Kristin Surpuhi Benli, for advisor Dr. Faezeh Rohani, and a
+general “Dear Guest” card. Each front carries a tailored invitation message; the back
+(honour line + level-H QR → live RSVP site) is shared. **Download hub** with per-side
+PDF buttons: [`card/index.html`](card/index.html). Source + details:
+[`card/card.html`](card/card.html), [`card/README.md`](card/README.md).
 
 ---
 
