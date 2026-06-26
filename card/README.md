@@ -33,6 +33,7 @@ PDF). A6 files live in [`card/exports/a6/`](exports/a6/) — 111 × 154 mm pages
 | **Gehad** (`?v=gehad`) | Gehad Ali (life partner & future wife) | Personal, heartfelt invitation + supervision line. |
 | **Mother** (`?v=mother`) | أمي الحبيبة (my beloved mother) | **Arabic** (RTL, Amiri) heartfelt invitation — **front & back** + supervision line. |
 | **Father** (`?v=father`) | أبي الحبيب (my beloved father) | **Arabic** (RTL, Amiri) heartfelt invitation — **front & back** + supervision line. |
+| **Sheikh** (`?v=sheikh`) | الشيخ أبو صهيب التابعي الأثري | **Arabic** (RTL, Amiri) heartfelt invitation — **front & back** + supervision line. |
 
 The **back is identical** on all three: CF monogram, an honour line, the QR code
 (level H → live RSVP site), and the event footer.
