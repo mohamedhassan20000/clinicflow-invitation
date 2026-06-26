@@ -20,6 +20,11 @@ Open **[`card/index.html`](index.html)** in a browser (or on the live site at
 | **Ali** (`?v=ali`) | Eng. Ali Edris | Formal invitation + supervision line. |
 | **Abdelrahman** (`?v=abdelrahman`) | Eng. Abdelrahman Mohamed | Formal invitation + supervision line. |
 | **Abdelrahman Khaled** (`?v=abdelrahmankhaled`) | Eng. Abdelrahman Khaled | Formal invitation + supervision line. |
+| **Talal Ali** (`?v=talalali`) | Eng. Talal Ali | Formal invitation + supervision line. |
+| **Anas** (`?v=anas`) | Anas Talal | Formal invitation + supervision line. |
+| **Rasha** (`?v=rasha`) | Rasha Said | Formal invitation + supervision line. |
+| **Hana** (`?v=hana`) | Hana Ashraf | Formal invitation + supervision line. |
+| **Mohamed Ali** (`?v=mohamedali`) | Eng. Mohamed Ali | Formal invitation + supervision line. |
 | **Hossam** (`?v=hossam`) | Eng. Hossam Hassan (brother) | Warm invitation to his brother + supervision line. |
 | **Khaled** (`?v=khaled`) | Khaled Hassan (brother) | Warm invitation to his brother + supervision line. |
 | **Gehad** (`?v=gehad`) | Gehad Ali (life partner & future wife) | Personal, heartfelt invitation + supervision line. |
