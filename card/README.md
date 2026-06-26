@@ -3,11 +3,14 @@
 Print artwork for the printed invitation. Concept **"Signal"**, **Midnight Blue + Silver**,
 matching the RSVP website. Three personalised versions, each a front + back.
 
-## ⬇️ Download hub
+## ⬇️ Download hubs
 
-Open **[`card/index.html`](index.html)** in a browser (or on the live site at
-`…/clinicflow-invitation/card/`) to download every card. Each version has separate
-**Front PDF** and **Back PDF** buttons (plus a “both sides” combined PDF).
+- **5 × 7 in** (127 × 178 mm): **[`card/index.html`](index.html)** → `…/clinicflow-invitation/card/`
+- **A6** (105 × 148 mm): **[`card/a6.html`](a6.html)** → `…/clinicflow-invitation/card/a6.html`
+
+Each version has separate **Front PDF** and **Back PDF** buttons (plus a “both sides” combined
+PDF). A6 files live in [`card/exports/a6/`](exports/a6/) — 111 × 154 mm pages (trim + 3 mm bleed),
+~360 dpi, generated from the same design as the 5×7 cards.
 
 ## The versions
 
