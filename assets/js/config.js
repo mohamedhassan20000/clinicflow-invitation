@@ -23,7 +23,7 @@ window.CONFIG = {
     description: "Clinic Management CRM Web Application",
     presenters: ["Mohamed Ibrahim", "Osama Talal", "Mohamed Seif"],
     university: "Üsküdar University",
-    location: "Hall C-Aziz Sancar, Üsküdar University",
+    location: "Class A336, Üsküdar University",
     start: "2026-06-30T15:00:00+03:00", // 30 June 2026, 3:00 PM (TR)
     end: "2026-06-30T16:00:00+03:00",   // assumed ~1h — adjust if needed
   },

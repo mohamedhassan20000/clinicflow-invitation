@@ -2,7 +2,7 @@
 
 A premium, zero-backend RSVP website for the **ClinicFlow CRM** graduation
 presentation by **Mohamed Ibrahim, Osama Talal & Mohamed Seif**, Üsküdar University
-— **30 June 2026, 3:00 PM, Hall C-Aziz Sancar**. Built as a single static page (plain HTML/CSS/vanilla JS),
+— **30 June 2026, 3:00 PM, Class A336**. Built as a single static page (plain HTML/CSS/vanilla JS),
 deployable directly from GitHub Pages, with attendance stored in a Google Sheet
 via Google Apps Script.
 
