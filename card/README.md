@@ -28,6 +28,8 @@ PDF). A6 files live in [`card/exports/a6/`](exports/a6/) — 111 × 154 mm pages
 | **Rasha** (`?v=rasha`) | Rasha Said | Formal invitation + supervision line. |
 | **Hana** (`?v=hana`) | Hana Ashraf | Formal invitation + supervision line. |
 | **Mohamed Ali** (`?v=mohamedali`) | Eng. Mohamed Ali | Formal invitation + supervision line. |
+| **Ahmet** (`?v=ahmet`) | Eng. Ahmet Aslan | Formal invitation + supervision line. |
+| **Yusuf** (`?v=yusuf`) | Eng. Yusuf Abdelmalek | Formal invitation + supervision line. |
 | **Hossam** (`?v=hossam`) | Eng. Hossam Hassan (brother) | Warm invitation to his brother + supervision line. |
 | **Khaled** (`?v=khaled`) | Khaled Hassan (brother) | Warm invitation to his brother + supervision line. |
 | **Gehad** (`?v=gehad`) | Gehad Ali (life partner & future wife) | Personal, heartfelt invitation + supervision line. |
