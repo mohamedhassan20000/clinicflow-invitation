@@ -57,10 +57,9 @@ The **back is identical** on all three: CF monogram, an honour line, the QR code
 
 ## Print specification
 
-- **Trim:** 5 × 7 in (127 × 178 mm), portrait
-- **Bleed:** 0.125 in (3 mm) → **artboard 5.25 × 7.25 in** ✓ verified
-- **Safe area:** text ≥ 0.1875 in inside trim ✓
-- **No outer border**
+- **Size (no bleed):** exactly **5 × 7 in (127 × 178 mm)** — `exports/` — or **A6 105 × 148 mm** — `exports/a6/`. Portrait.
+- The design **fills the page edge-to-edge — no white border**. Print at **actual size / 100 %** (not “fit to page”).
+- **No outer border**, no bleed (the earlier 3 mm-bleed versions were replaced).
 - **Stock:** 350 gsm soft-touch matte recommended
 - **Premium upgrade:** silver foil on wordmark/monogram/hairlines — keep the **QR as flat
   dark ink on ivory** (don’t foil it; foil harms scanning).
