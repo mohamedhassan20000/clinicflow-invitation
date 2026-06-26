@@ -47,11 +47,11 @@
       <div class="logi">
         <div class="item">
           <svg class="ico" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>
-          <span class="k">Date</span><span class="v">29 June 2026</span>
+          <span class="k">Date</span><span class="v">30 June 2026</span>
         </div>
         <div class="item">
           <svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-          <span class="k">Time</span><span class="v">2:00 PM</span>
+          <span class="k">Time</span><span class="v">3:00 PM</span>
         </div>
         <div class="item">
           <svg class="ico" viewBox="0 0 24 24"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
@@ -74,10 +74,10 @@
         <p class="b-word">ClinicFlow <span class="accent">CRM</span></p>
       </div>
 
-      <p class="honor">It would be our honor to have you join the presentation of our graduation project.</p>
+      <p class="honor" id="honor">It would be our honor to have you join the presentation of our graduation project.</p>
 
       <div class="qr-assembly">
-        <span class="qr-eyebrow">Confirm your attendance</span>
+        <span class="qr-eyebrow" id="qrEyebrow">Confirm your attendance</span>
         <div class="qr-plate">
           <div class="qr-tile">
             <img src="qr/clinicflow-qr.svg" alt="QR code linking to the RSVP website" />
@@ -85,13 +85,13 @@
           </div>
         </div>
         <div>
-          <p class="scan-text">Scan to confirm your attendance &amp; get event details.</p>
+          <p class="scan-text" id="scanText">Scan to confirm your attendance &amp; get event details.</p>
         </div>
       </div>
 
       <div class="b-foot">
-        <p class="evt">Graduation Showcase · 29 June 2026</p>
-        <p class="place">Hall C-Aziz Sancar · Üsküdar University</p>
+        <p class="evt" id="footEvt">Graduation Showcase · 30 June 2026</p>
+        <p class="place" id="footPlace">Hall C-Aziz Sancar · Üsküdar University</p>
       </div>
     </div>
 
@@ -154,7 +154,26 @@
         body: "يا مَن أنسبُ إليكِ الفضلَ في حياتي كلّها — كلُّ تقدّمٍ أو خيرٍ أراه في طريقي هو ثمرةُ دعائكِ، ولولاكِ ما وصلتُ إلى هنا. يشرّفني ويسعدني أن أدعوكِ لحضور العرض التقديمي لمشروع تخرّجي، ClinicFlow CRM.",
         emph: "وجودكِ بجانبي هو أغلى ما في هذا اليوم.",
         sup: "تحت إشراف د. فايزة روحاني",
-        ar: true
+        ar: true,
+        backAr: true,
+        honor: "يشرّفني أن تشاركيني حضور العرض التقديمي لمشروع تخرّجي.",
+        qrEyebrow: "لتأكيد الحضور",
+        scanText: "امسح الرمز لتأكيد حضورك ومعرفة تفاصيل الحفل.",
+        footEvt: "حفل عرض مشروع التخرّج · ٣٠ يونيو ٢٠٢٦",
+        footPlace: "قاعة C-Aziz Sancar · جامعة أسكودار"
+      },
+      father: {
+        addressee: "إلى أبي الحبيب،",
+        body: "يا سندي وقدوتي، ومَن تعلّمتُ منه معنى الجدّ والصبر — ما كنتُ لأصلَ إلى هذا اليوم لولا دعمكَ الذي لا ينقطع وتضحياتكَ التي لا تُنسى. يشرّفني ويسعدني أن أدعوكَ لحضور العرض التقديمي لمشروع تخرّجي، ClinicFlow CRM.",
+        emph: "فخري الحقيقي أن أراكَ بجانبي في هذا اليوم.",
+        sup: "تحت إشراف د. فايزة روحاني",
+        ar: true,
+        backAr: true,
+        honor: "يشرّفني أن تشاركني حضور العرض التقديمي لمشروع تخرّجي.",
+        qrEyebrow: "لتأكيد الحضور",
+        scanText: "امسح الرمز لتأكيد حضورك ومعرفة تفاصيل الحفل.",
+        footEvt: "حفل عرض مشروع التخرّج · ٣٠ يونيو ٢٠٢٦",
+        footPlace: "قاعة C-Aziz Sancar · جامعة أسكودار"
       }
     };
 
@@ -168,6 +187,15 @@
     var sup = document.getElementById('msgSup');
     if (data.sup) { sup.textContent = data.sup; } else { sup.hidden = true; }
     if (data.ar) document.getElementById('front').classList.add('ar');
+
+    /* back (Arabic versions override the English defaults) */
+    function setText(id, val) { if (val != null) { var el = document.getElementById(id); if (el) el.textContent = val; } }
+    setText('honor', data.honor);
+    setText('qrEyebrow', data.qrEyebrow);
+    setText('scanText', data.scanText);
+    setText('footEvt', data.footEvt);
+    setText('footPlace', data.footPlace);
+    if (data.backAr) document.getElementById('back').classList.add('ar');
 
     /* download button → this version's 2-page PDF */
     var dl = document.getElementById('dl-btn');

@@ -24,8 +24,8 @@ window.CONFIG = {
     presenters: ["Mohamed Ibrahim", "Osama Talal", "Mohamed Seif"],
     university: "Üsküdar University",
     location: "Hall C-Aziz Sancar, Üsküdar University",
-    start: "2026-06-29T14:00:00+03:00", // 29 June 2026, 2:00 PM (TR)
-    end: "2026-06-29T15:00:00+03:00",   // assumed ~1h — adjust if needed
+    start: "2026-06-30T15:00:00+03:00", // 30 June 2026, 3:00 PM (TR)
+    end: "2026-06-30T16:00:00+03:00",   // assumed ~1h — adjust if needed
   },
 
   /* Analytics: set to true once you add a GoatCounter script in index.html */

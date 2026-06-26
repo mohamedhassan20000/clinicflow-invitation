@@ -151,6 +151,13 @@ body { font-family: var(--sans); background: #2a2a2a; }
 
 /* QR assembly: framed plate that reads as part of the design */
 .back .honor { font-family: var(--serif); font-size: 12.5pt; line-height: 1.35; color: var(--ivory); margin: 0; max-width: 3.5in; }
+
+/* Arabic back (mother / father) — RTL + Amiri */
+.back.ar .honor { font-family: "Amiri", serif; direction: rtl; font-size: 13.5pt; line-height: 1.7; max-width: 3.7in; }
+.back.ar .qr-eyebrow { font-family: "Amiri", serif; direction: rtl; letter-spacing: 0; text-transform: none; font-size: 9.5pt; }
+.back.ar .scan-text { font-family: "Amiri", serif; direction: rtl; font-size: 13pt; line-height: 1.6; }
+.back.ar .b-foot .evt { font-family: "Amiri", serif; direction: rtl; letter-spacing: 0; text-transform: none; font-size: 9.5pt; }
+.back.ar .b-foot .place { font-family: "Amiri", serif; direction: rtl; font-size: 13pt; }
 .back .qr-assembly { display: flex; flex-direction: column; align-items: center; gap: 0.16in; width: 100%; }
 .back .qr-eyebrow {
   display: inline-flex; align-items: center; gap: 0.1in;

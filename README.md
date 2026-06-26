@@ -1,8 +1,8 @@
 # ClinicFlow CRM — Graduation Invitation RSVP Site
 
 A premium, zero-backend RSVP website for the **ClinicFlow CRM** graduation
-presentation by **Mohamed Ibrahim**, Üsküdar University — **29 June 2026, 2:00 PM,
-Hall C-Aziz Sancar**. Built as a single static page (plain HTML/CSS/vanilla JS),
+presentation by **Mohamed Ibrahim, Osama Talal & Mohamed Seif**, Üsküdar University
+— **30 June 2026, 3:00 PM, Hall C-Aziz Sancar**. Built as a single static page (plain HTML/CSS/vanilla JS),
 deployable directly from GitHub Pages, with attendance stored in a Google Sheet
 via Google Apps Script.
 
@@ -126,10 +126,11 @@ guest list — verify it there.
 
 ## 5. Physical card
 
-Final concept: **"Signal"** (front + integrated-QR back), in **eight personalised
+Final concept: **"Signal"** (front + integrated-QR back), in **nine personalised
 versions** — for Dr. Kristin Surpuhi Benli, Dr. Salim Jibrin Danbatta, Eng. Ali Edris,
 Eng. Abdelrahman Mohamed, advisor Dr. Faezeh Rohani, a general “Dear Guest” card, a
-personal card for Gehad Ali, and an **Arabic** card for the presenter's mother. Each front carries a tailored
+personal card for Gehad Ali, and **Arabic** cards (front & back) for the presenter's
+mother and father. Each front carries a tailored
 invitation message; the back (honour line + level-H QR → live RSVP site) is shared. **Download hub** with per-side
 PDF buttons: [`card/index.html`](card/index.html). Source + details:
 [`card/card.html`](card/card.html), [`card/README.md`](card/README.md).
@@ -154,7 +155,7 @@ All copy lives in two synced places (keep them identical to the printed card):
 - **`index.html`** holds the visible text (hero, chips, confirmation card).
 
 If the time/room changes, update both. The countdown targets
-`EVENT.start` (`2026-06-29T14:00:00+03:00`).
+`EVENT.start` (`2026-06-30T15:00:00+03:00`).
 
 ---
 
