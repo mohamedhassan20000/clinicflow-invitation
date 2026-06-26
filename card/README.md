@@ -30,6 +30,7 @@ PDF). A6 files live in [`card/exports/a6/`](exports/a6/) — 111 × 154 mm pages
 | **Mohamed Ali** (`?v=mohamedali`) | Eng. Mohamed Ali | Formal invitation + supervision line. |
 | **Ahmet** (`?v=ahmet`) | Eng. Ahmet Aslan | Formal invitation + supervision line. |
 | **Yusuf** (`?v=yusuf`) | Eng. Yusuf Abdelmalek | Formal invitation + supervision line. |
+| **Mohamed Amin** (`?v=mohamedamin`) | Eng. Mohamed Amin (friend & brother) | Warm invitation + supervision line. |
 | **Hossam** (`?v=hossam`) | Eng. Hossam Hassan (brother) | Warm invitation to his brother + supervision line. |
 | **Khaled** (`?v=khaled`) | Khaled Hassan (brother) | Warm invitation to his brother + supervision line. |
 | **Gehad** (`?v=gehad`) | Gehad Ali (life partner & future wife) | Personal, heartfelt invitation + supervision line. |
