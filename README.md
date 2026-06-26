@@ -126,11 +126,11 @@ guest list — verify it there.
 
 ## 5. Physical card
 
-Final concept: **"Signal"** (front + integrated-QR back), in **nine personalised
+Final concept: **"Signal"** (front + integrated-QR back), in **eleven personalised
 versions** — for Dr. Kristin Surpuhi Benli, Dr. Salim Jibrin Danbatta, Eng. Ali Edris,
-Eng. Abdelrahman Mohamed, advisor Dr. Faezeh Rohani, a general “Dear Guest” card, a
-personal card for Gehad Ali, and **Arabic** cards (front & back) for the presenter's
-mother and father. Each front carries a tailored
+Eng. Abdelrahman Mohamed, the presenter's brothers Eng. Hossam Hassan and Khaled Hassan,
+advisor Dr. Faezeh Rohani, a general “Dear Guest” card, a personal card for Gehad Ali,
+and **Arabic** cards (front & back) for the presenter's mother and father. Each front carries a tailored
 invitation message; the back (honour line + level-H QR → live RSVP site) is shared. **Download hub** with per-side
 PDF buttons: [`card/index.html`](card/index.html). Source + details:
 [`card/card.html`](card/card.html), [`card/README.md`](card/README.md).

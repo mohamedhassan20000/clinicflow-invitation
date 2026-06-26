@@ -19,6 +19,8 @@ Open **[`card/index.html`](index.html)** in a browser (or on the live site at
 | **General** (`?v=general`) | “Dear Guest” | General invitation + supervision line. |
 | **Ali** (`?v=ali`) | Eng. Ali Edris | Formal invitation + supervision line. |
 | **Abdelrahman** (`?v=abdelrahman`) | Eng. Abdelrahman Mohamed | Formal invitation + supervision line. |
+| **Hossam** (`?v=hossam`) | Eng. Hossam Hassan (brother) | Warm invitation to his brother + supervision line. |
+| **Khaled** (`?v=khaled`) | Khaled Hassan (brother) | Warm invitation to his brother + supervision line. |
 | **Gehad** (`?v=gehad`) | Gehad Ali (life partner & future wife) | Personal, heartfelt invitation + supervision line. |
 | **Mother** (`?v=mother`) | أمي الحبيبة (my beloved mother) | **Arabic** (RTL, Amiri) heartfelt invitation — **front & back** + supervision line. |
 | **Father** (`?v=father`) | أبي الحبيب (my beloved father) | **Arabic** (RTL, Amiri) heartfelt invitation — **front & back** + supervision line. |
